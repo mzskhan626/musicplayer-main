@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 12px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.title {
+  top: 0;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  font-size: 50px;
+  font-family: "Indie Flower", cursive;
+  text-shadow: 2px 2px 2px #000000;
+}
+.background {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+}
+
+.background img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.container.show {
+  visibility: visible;
+  transition: 0.5s;
+}
+.container {
+  visibility: hidden;
+  margin-top: 95px;
+  margin-left: 13px;
+  background-color: #e7e7e749;
+  height: 540px;
+  width: 370px;
+  transition: 0.5s;
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.986) 0px 3px 8px;
+}
+
+.container:hover {
+  transition: 0.5s;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  background-color: #e7e7e7;
+}
+
+.player-img {
+  width: 300px;
+  height: 250px;
+  position: relative;
+  top: 10px;
+  left: 35px;
+}
+
+.player-img img {
+  object-fit: cover;
+  border-radius: 10px;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.player-img img.active {
+  width: 100%;
+  height: 100%;
+  /* transition: all 0.5s; */
+  opacity: 1;
+}
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+  font-weight: 500;
+  margin: 60px 0 0;
+}
+
+h3 {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+  margin: 10px 0 0;
+}
+
+.one {
+  color: rgb(200, 247, 250);
+}
+
+.two {
+  color: #ffc8dd;
+}
+
+.player-progress {
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px 35px;
+  height: 6px;
+}
+
+.progress {
+  background-color: #212121;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: wid 0.1s linear;
+}
+
+.music-duration {
+  position: relative;
+  top: -30px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-controls {
+  position: relative;
+  left: 115px;
+}
+
+.fa-solid {
+  font-size: 30px;
+  color: #666;
+  margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
+  /* transition: all 0.3s ease; */
+}
+
+.fa-solid:hover {
+  filter: brightness(40%);
+}
+
+.play-button {
+  font-size: 44px;
+  position: relative;
+  top: 3px;
+}
+
+.phone {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.phone img {
+  height: 990px;
+}
+
+.phone-play {
+  position: absolute;
+  bottom: 0;
+  margin-left: 15px;
+  margin-bottom: 41px;
+  cursor: pointer;
+}
+.phone-play i {
+  color: rgba(243, 243, 243, 0.267);
+  font-size: 70px;
+}
+.phone-play i:hover {
+  transition: 0.5s;
+  color: rgba(243, 243, 243, 0.664);
+}
+
+.socials {
+  display: flex;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  margin-left: 25px;
+}
+
+.socials a {
+  font-size: 25px;
+  margin-right: 15px;
+  color: rgba(255, 255, 255, 0.418);
+}
+
+.socials a:hover {
+  color: white;
+  transition: 0.5s;
+  transform: scale(1);
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 25px;
+}
+
+.copyright p {
+  font-size: 15px;
+  font-weight: bolder;
+  color: #666;
+}
